@@ -1,5 +1,5 @@
-function onClicked(tab) {
-  var prefix = ' » '
+function action(tab) {
+  var prefix = ''
   var url = 'https://twitter.com/intent/tweet?'
     + 'text=' + encodeURIComponent(prefix) + encodeURIComponent(tab.title)
     + '&url=' + encodeURIComponent(tab.url);
@@ -12,6 +12,15 @@ function onClicked(tab) {
       +',status=no');
 }
 
-chrome.browserAction.onClicked.addListener(onClicked);
+chrome.browserAction.onClicked.addListener(action);
+
+chrome.commands.onCommand.addListener(function(command) {
+  if (command == "tweet" ) {
+    // chrome.tabs.getCurrent(action);
+    chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
+      action(tabs[0]);
+    });
+  }
+});
 
 // vim:set ts=8 sts=2 sw=2 tw=0 et:

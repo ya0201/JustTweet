@@ -15,11 +15,22 @@
     "default_title": "__MSG_buttonTip__"
   },
 
+  "commands": {
+    "tweet": {
+      "suggested_key": {
+        "default": "Ctrl+T",
+        "mac": "MacCtrl+T"
+      },
+      "description": "tweet current tab"
+    }
+  },
+
   "background": {
     "persistent": false,
     "scripts": [ "background.js" ]
   },
+
   "permissions": [
-    "tabs"
+    "tabs", "commands"
   ]
 }
