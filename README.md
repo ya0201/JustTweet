@@ -1,5 +1,11 @@
 # Just Tweet Button
 
+## Manual install
+chrome->extension->developer modeにて，
+```
+パッケージ化されていない拡張機能を読み込む
+```
+でsrcディレクトリを指定
 
 ## Publish
 
