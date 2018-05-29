@@ -13,7 +13,7 @@ onにしているとchromeのアドレスバー右に青い鳥が出る．その
 
 ## Customize
 src/manifest.jsonの以下部分を適当に変更するとショートカットの割当を任意に変更できる．他のextensionと衝突などしてしまったときに変えよう．
-```javascript
+```src/manifest.json
 commands": {
   "tweet": {
     "suggested_key": {
